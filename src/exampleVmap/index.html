@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IMA SDK example</title>
+  </head>
+  <body>
+    <h1>IMA SDK: VMAP example</h1>
+    <div class="example-block">
+      <div id="videoContainer">
+        <video
+          id="videoElement"
+          controls
+          src="https://storage.yandexcloud.net/lerok007/Podcast_800x450.mp4"
+        ></video>
+        <div id="adContainer" class="backwards"></div>
+        <div class="resume-button hidden" role="button">
+          <svg
+            width="80"
+            height="80"
+            viewBox="0 0 80 80"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M40 80C62.0914 80 80 62.0914 80 40C80 17.9086 62.0914 0 40 0C17.9086 0 0 17.9086 0 40C0 62.0914 17.9086 80 40 80Z"
+              fill="#E31E30"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M53.0915 39.1588C53.7038 39.5525 53.7038 40.4475 53.0915 40.8412L33.5408 53.4095C32.8752 53.8374 32 53.3595 32 52.5683V27.4317C32 26.6405 32.8752 26.1627 33.5408 26.5905L53.0915 39.1588Z"
+              fill="white"
+            />
+          </svg>
+        </div>
+      </div>
+      <div class="controls">
+        <button id="playButton" class="button">Resume Ad</button>
+        <button id="pauseButton" class="button">Pause Ad</button>
+      </div>
+    </div>
+    <script type="module" defer src="./index.ts"></script>
+  </body>
+</html>

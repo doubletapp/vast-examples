@@ -1,0 +1,43 @@
+.example-block {
+  display: flex;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 50px;
+}
+
+.button {
+  width: 100%;
+
+  margin-bottom: 20px;
+
+  cursor: pointer;
+}
+
+#videoContainer {
+  position: relative;
+
+  width: 800px;
+  height: 450px;
+
+  background-color: black;
+}
+
+#videoElement {
+  width: 100%;
+  height: 100%;
+}
+
+#adContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  width: 100%;
+  height: 100%;
+}
