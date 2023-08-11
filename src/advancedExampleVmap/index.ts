@@ -1,5 +1,6 @@
 import { loadIma } from '../imaLoader'
 import { ImaManager } from './ImaManager'
+import { VMAP_XML_URL } from '../variables'
 import '../global.css'
 import './local.css'
 
@@ -20,9 +21,7 @@ function createAdService() {
   const imaManager = new ImaManager(videoElement, adContainer)
 
   // preload VMAP
-  imaManager.requestAds(
-    'https://ams3.digitaloceanspaces.com/test.dtsite/files/vmap_BOk5MNz.xml'
-  )
+  imaManager.requestAds(VMAP_XML_URL)
 
   handleControls(imaManager)
 

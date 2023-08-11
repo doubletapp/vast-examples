@@ -1,3 +1,4 @@
+import { VAST_XML_URL } from './../variables';
 import { google } from '@alugha/ima'
 import ResizeObserver from 'resize-observer-polyfill'
 
@@ -146,9 +147,7 @@ export class ImaManager {
         break
       case window.google.ima.AdEvent.Type.SKIPPED:
       case window.google.ima.AdEvent.Type.ALL_ADS_COMPLETED:
-        this.requestAds(
-          'https://ams3.digitaloceanspaces.com/test.dtsite/files/vast_zXHuhVQ.xml'
-        )
+        this.requestAds(VAST_XML_URL)
         break
     }
   }

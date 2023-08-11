@@ -2,6 +2,7 @@ import { loadIma } from '../imaLoader'
 import { ImaManager } from './ImaManager'
 import '../global.css'
 import './local.css'
+import { VMAP_XML_URL } from '../variables'
 
 function createAdService() {
   // globally change locale
@@ -24,9 +25,7 @@ function createAdService() {
   videoElement.addEventListener('play', onVideoPlay)
 
   function onVideoPlay() {
-    imaManager.requestAds(
-      'https://ams3.digitaloceanspaces.com/test.dtsite/files/vmap_BOk5MNz.xml'
-    )
+    imaManager.requestAds(VMAP_XML_URL)
     videoElement.removeEventListener('play', onVideoPlay)
   }
 }

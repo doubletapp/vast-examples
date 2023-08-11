@@ -1,5 +1,6 @@
 import { google } from '@alugha/ima'
 import ResizeObserver from 'resize-observer-polyfill'
+import { VMAP_XML_URL } from '../variables'
 
 export class ImaManager {
   constructor(
@@ -178,12 +179,7 @@ export class ImaManager {
         }
         break
       case window.google.ima.AdEvent.Type.ALL_ADS_COMPLETED:
-        this.requestAds(
-          'https://ams3.digitaloceanspaces.com/test.dtsite/files/articleVmap_pE7CxDO.xml'
-        )
-        break
-      case window.google.ima.AdEvent.Type.ALL_ADS_COMPLETED:
-        console.warn('ALL_ADS_COMPLETED - you need to reload page if you want more ads')
+        this.requestAds(VMAP_XML_URL)
         break
       // look for warnings and errors with current ad
       case window.google.ima.AdEvent.Type.LOG:

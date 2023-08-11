@@ -1,5 +1,6 @@
 import { loadIma } from '../imaLoader'
 import { ImaManager } from './ImaManager'
+import { VAST_XML_URL } from '../variables'
 import '../global.css'
 import './local.css'
 
@@ -33,9 +34,7 @@ function addControlsHandlers(imaManager: ImaManager) {
   const startBtn = document.getElementById('startButton')
   startBtn?.addEventListener('click', () => {
     // Start to load current ad when start ad button clicked
-    imaManager.requestAds(
-      'https://ams3.digitaloceanspaces.com/test.dtsite/files/vast_zfVDOqW.xml'
-    )
+    imaManager.requestAds(VAST_XML_URL)
   })
   const playBtn = document.getElementById('playButton')
   playBtn?.addEventListener('click', () => {
